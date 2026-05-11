@@ -35,7 +35,7 @@ proyecto_integrador_equipo-22/
 ├── .gitignore                                # Archivos excluidos del control de versiones
 │
 ├── notebooks/
-│   └── eda_crc.ipynb                         # Análisis Exploratorio de Datos completo
+│   └── Avance1_Equipo22.ipynb                         # Análisis Exploratorio de Datos completo
 │
 ├── data/
 │   └── BASE DE DATOS CRC PROYECT LABELED(Data Mat).csv   # Conjunto de datos (CC BY 4.0)
@@ -80,10 +80,10 @@ python -m ipykernel install --user --name=proyecto-integrador-crc --display-name
 
 ```bash
 # Opción 1: Abrir Jupyter Notebook
-jupyter notebook notebooks/eda_crc.ipynb
+jupyter notebook notebooks/Avance1_Equipo22.ipynb
 
 # Opción 2: Abrir directamente en VS Code
-code notebooks/eda_crc.ipynb
+code notebooks/Avance1_Equipo22.ipynb
 ```
 
 La libreta detecta automáticamente la ubicación del conjunto de datos y se ejecuta de inicio a fin sin necesidad de modificaciones manuales. Tiempo aproximado de ejecución completa: 2–3 minutos.
@@ -94,7 +94,7 @@ La libreta detecta automáticamente la ubicación del conjunto de datos y se eje
 
 ## Mapeo de la libreta a los criterios de evaluación
 
-La libreta `notebooks/eda_crc.ipynb` está organizada para abordar de forma explícita los cinco criterios de la rúbrica del Avance 1:
+La libreta `notebooks/Avance1_Equipo22.ipynb` está organizada para abordar de forma explícita los cinco criterios de la rúbrica del Avance 1:
 
 | Criterio (20 pts c/u) | Secciones de la libreta | Contenido |
 |---|---|---|
