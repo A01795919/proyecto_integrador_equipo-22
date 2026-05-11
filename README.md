@@ -3,7 +3,7 @@
 ## Identificación de biomarcadores lipidómicos y metabolómicos para la detección temprana de cáncer colorrectal mediante modelos predictivos de inteligencia artificial
 
 > **Avance 1 — Análisis Exploratorio de Datos (EDA)**
-> Proyecto Integrador · Maestría en Ciencia de Datos · Tecnológico de Monterrey
+> Proyecto Integrador · Maestría en Inteligencia Artificial Aplicada · Tecnológico de Monterrey
 
 ---
 
@@ -172,7 +172,7 @@ El artículo y los materiales suplementarios se distribuyen bajo licencia **Crea
 
 ## Licencia y uso
 
-Este repositorio constituye trabajo académico desarrollado en el marco del Proyecto Integrador de la Maestría en Ciencia de Datos del Tecnológico de Monterrey. El conjunto de datos y el artículo de referencia se redistribuyen bajo Creative Commons Attribution 4.0. El código y la documentación propia de este repositorio quedan sujetos a uso académico.
+Este repositorio constituye trabajo académico desarrollado en el marco del Proyecto Integrador de la Maestría en Inteligencia Artificial Aplicada del Tecnológico de Monterrey. El conjunto de datos y el artículo de referencia se redistribuyen bajo Creative Commons Attribution 4.0. El código y la documentación propia de este repositorio quedan sujetos a uso académico.
 
 ---
 
