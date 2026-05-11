@@ -1,0 +1,40 @@
+# Entornos virtuales de Python
+.venv/
+venv/
+env/
+ENV/
+
+# Caché y compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Notebooks: archivos de respaldo y configuración local
+*-checkpoint.ipynb
+*.bak
+*.tmp
+
+# Logs y outputs temporales
+*.log
+results_local/
+outputs_local/
