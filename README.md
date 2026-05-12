@@ -31,18 +31,14 @@ El conjunto de datos (211 observaciones × 127 lípidos cuantificados, más vari
 proyecto_integrador_equipo-22/
 │
 ├── README.md                                # Este documento
-├── requirements.txt                          # Dependencias de Python
-├── .gitignore                                # Archivos excluidos del control de versiones
+├── requirements.txt                         # Dependencias de Python
+├── .gitignore                               # Archivos excluidos del control de versiones
 │
 ├── notebooks/
-│   └── Avance1_Equipo22.ipynb                         # Análisis Exploratorio de Datos completo
+│   └── Avance1_Equipo22.ipynb               # Análisis Exploratorio de Datos completo
 │
 ├── data/
 │   └── BASE DE DATOS CRC PROYECT LABELED(Data Mat).csv   # Conjunto de datos (CC BY 4.0)
-│
-├── docs/
-│   ├── memorando_hallazgos_lipidomicos.md    # Memorando para el equipo biomédico (fuente)
-│   └── memorando_hallazgos_lipidomicos.pdf   # Memorando para el equipo biomédico (PDF)
 │
 └── references/
     └── Alboniga_etal_2025_Cancers_17_2339.pdf   # Artículo de procedencia del dataset
@@ -98,11 +94,11 @@ La libreta `notebooks/Avance1_Equipo22.ipynb` está organizada para abordar de f
 
 | Criterio (20 pts c/u) | Secciones de la libreta | Contenido |
 |---|---|---|
-| **1. Estructura de los datos** | Paso 1 (1.1–4) · Paso 2.4 | Forma del conjunto, tipos de datos, reconstrucción de encabezados anidados, distribución de la variable objetivo, cardinalidad de variables categóricas |
-| **2. Análisis univariante** | Paso 2.1 · Paso 3.1 · Paso 3.2 | Histogramas y diagramas de caja para variables clínicas, análisis de asimetría sobre los 127 lípidos, diagramas Q-Q comparativos |
-| **3. Análisis bi/multivariante** | Paso 4.3–4.6 · Paso 5.1–5.4 | Análisis pareado (Wilcoxon-Mann-Whitney) con tres comparaciones binarias, mapa de calor de correlación agrupado por familia, PCA con elipses de confianza, PLS-DA con cálculo de VIP scores, atributos estructurales derivados |
-| **4. Preprocesamiento** | Paso 2.1.4 · Paso 3.3 · Paso 3.4 · Paso 3.5 | Imputación por mediana de grupo (justificada por test χ²), evaluación comparativa de cuatro transformaciones (raw, log1p, Yeo-Johnson, Box-Cox), detección de valores atípicos mediante MAD post-transformación |
-| **5. Conclusiones** | Conclusiones del análisis exploratorio · `docs/memorando_hallazgos_lipidomicos.pdf` | Síntesis narrativa de los hallazgos, replicación íntegra de biomarcadores reportados por Albóniga et al. (2025), implicaciones para la fase de modelado, memorando complementario para discusión con el equipo biomédico |
+| **1. Estructura de los datos** | Paso 1 · Paso 2.3 | Forma del conjunto, tipos de datos, reconstrucción de encabezados anidados, diccionario de variables por familia, distribución de la variable objetivo, cardinalidad de variables categóricas |
+| **2. Análisis univariante** | Paso 2.1 · Paso 3.1 · Paso 3.2 | Histogramas y diagramas de caja para variables clínicas, análisis de asimetría sobre los 127 lípidos, diagramas Q-Q comparativos por transformación |
+| **3. Análisis bi/multivariante** | Paso 4 · Paso 5 | Selección supervisada de variables con `SelectKBest` (χ² sobre categóricas one-hot e información mutua sobre numéricas), mapa de calor de correlación agrupado por familia, PCA con elipses de confianza al 95%, atributos estructurales derivados evaluados con información mutua |
+| **4. Preprocesamiento** | Paso 2.1.4 · Paso 3.3 · Paso 3.4 · Paso 3.5 | Imputación por mediana de grupo (justificada por test χ² y validada por matrices de correlación pre/post), evaluación comparativa de cuatro transformaciones (raw, log1p, Yeo-Johnson, Box-Cox), detección de valores atípicos mediante regla IQR sobre datos transformados |
+| **5. Conclusiones** | Conclusiones del análisis exploratorio · Pipeline propuesto para Avance 2 | Síntesis narrativa por paso, ranking de variables candidatas al modelado, caracterización de la dificultad del problema multiclase a partir de PCA e información mutua, pipeline propuesto para la fase de modelado supervisado |
 
 ---
 
@@ -111,28 +107,30 @@ La libreta `notebooks/Avance1_Equipo22.ipynb` está organizada para abordar de f
 ### Calidad del conjunto de datos
 
 - **211 observaciones × 127 lípidos** con distribución por grupo: CTRL 78, AA 58, CRC 75 (desbalance leve, ratio 1.34).
-- Se identificó un patrón de valores faltantes **dependiente del grupo** (test χ², 13/56 lípidos con p < 0.05). La ausencia es consistente con concentraciones por debajo del límite de detección del instrumento UHPLC-MS, fenómeno biológicamente informativo. La estrategia de imputación adoptada (mediana por grupo) preserva esta señal.
+- Se identificó un patrón de valores faltantes **dependiente del grupo** (test χ², 13 de 56 lípidos con p < 0.05). La ausencia es consistente con concentraciones por debajo del límite de detección del instrumento UHPLC-MS, fenómeno biológicamente informativo. La estrategia de imputación adoptada (mediana por grupo) preserva esta señal y se validó cuantitativamente mediante comparación de matrices de correlación pre y post-imputación.
 
 ### Transformación de datos
 
-- Las 127 variables lipídicas presentan asimetría muy fuerte en datos crudos (mediana de skewness = 5.47).
-- Se evaluaron formalmente cuatro transformaciones: raw, log1p, Yeo-Johnson y Box-Cox. La transformación **Box-Cox** demostró superioridad cuantitativa al normalizar el 81.1% de las variables (test Shapiro-Wilk, p > 0.05), frente al 5.5% con Yeo-Johnson y al 0.8% con log1p.
+- Las 127 variables lipídicas presentan asimetría muy fuerte en datos crudos (mediana de skewness ≈ 5.5).
+- Se evaluaron formalmente cuatro transformaciones: raw, log1p, Yeo-Johnson y Box-Cox. La transformación **Box-Cox** demostró superioridad cuantitativa al aproximar el 81.1% de las variables a la normalidad (test Shapiro-Wilk, p > 0.05), frente al 5.5% con Yeo-Johnson y al 0.8% con log1p.
+- Sobre los datos transformados, la regla IQR de Tukey identifica 769 outliers sobre 25 742 celdas (≈ 3%), tasa coherente con una cohorte depurada.
 
-### Biomarcadores identificados
+### Selección supervisada de variables (Paso 4)
 
-- **42 lípidos** estadísticamente significativos en el análisis multigrupo (Kruskal-Wallis, q < 0.05).
-- **Replicación íntegra del 100%** de los biomarcadores reportados por Albóniga et al. (2025): 7/7 en CRC vs CTRL (Tabla 3) y 5/5 en CRC vs AA (Tabla 4).
-- **`CE(20:4)`** se confirma como el biomarcador con mayor poder discriminativo (log₂ fold-change = +2.56, q = 7.4 × 10⁻¹⁰).
+- **Categóricas (χ² sobre one-hot encoding):** `fob_YES` emerge como dominante (χ² = 23.9, p = 6.5 × 10⁻⁶); `gender_Male` no resulta discriminativa.
+- **Numéricas (información mutua, estimador KSG):** el rango va de 0 a 0.382. Lidera `GlcCer(d18:1/24:0)` con MI = 0.382. La variable clínica `fit_ug_g` alcanza MI = 0.170, posicionándose en el top 30.
+- **Composición del top 20:** dominio de glicerofosfolípidos (9 variables, varias de cadena éter), seguido por esfingolípidos (5), triglicéridos (4) y ésteres de colesterol (2) — diversidad estructural que sugiere que la señal discriminativa no reside en una familia única.
 
 ### Caracterización de la dificultad del problema
 
-- La discriminación es asimétrica entre las tres clases: 38 biomarcadores significativos en CRC vs CTRL, 30 en CRC vs AA, pero únicamente **6 en AA vs CTRL**.
-- El adenoma avanzado (AA) resulta lipidómicamente cercano al control sano, lo cual cuantifica la dificultad clínica de la detección temprana.
+- En PCA, las elipses de confianza al 95% de las tres clases se superponen casi completamente; CTRL y AA son visualmente indistinguibles en los dos primeros componentes (42.8% de varianza explicada acumulada). La señal biológica existe pero no emerge en los ejes no supervisados de máxima varianza.
+- La correlación intra-familia es aproximadamente cinco veces superior a la inter-familia (mediana |r| de 0.43 vs 0.09), con 166 pares por encima de |r| > 0.8: multicolinealidad sustancial que orientará la elección del modelo en el Avance 2.
 
 ### Aporte diferencial al estudio original
 
-- **`plasmalogen_frac`** — atributo derivado que agrega la fracción de plasmalógenos por observación — emerge como el **único feature** donde CRC se separa estadísticamente de **ambos** CTRL y AA, mientras AA y CTRL permanecen indistinguibles (p = 0.96). Sugiere un marcador específico del momento de transición carcinogénica.
-- Validación independiente del procedimiento de detección de valores atípicos: **6 de las 12 muestras anómalas** identificadas en la Figura S2 del estudio original son detectadas por nuestra metodología (z robusto MAD post-Box-Cox), pese a emplear un método distinto al del estudio.
+- **Auditoría metodológica formal** del preprocesamiento (Box-Cox seleccionado tras comparación cuantitativa contra raw, log1p y Yeo-Johnson; imputación validada con norma de Frobenius sobre matrices de correlación; outliers gestionados con la regla IQR sobre datos transformados).
+- **Selección supervisada de variables** orientada al problema multiclase CTRL/AA/CRC con un ranking unificado de variables clínicas categóricas (χ²) y numéricas (información mutua), no restringido a comparaciones por pares.
+- **Atributos estructurales agregados** (longitud media de cadena, índice de insaturación, fracción de plasmalógenos), evaluados con la misma vara supervisada que el resto del ranking. Su MI individual resulta modesto (≤ 0.021); su valor potencial reside en la interacción con otras variables durante el modelado, aspecto que se evaluará en el Avance 2.
 
 ---
 
@@ -140,10 +138,11 @@ La libreta `notebooks/Avance1_Equipo22.ipynb` está organizada para abordar de f
 
 El presente entregable corresponde al Avance 1 (Análisis Exploratorio de Datos). Los avances subsecuentes contemplarán:
 
-1. **Construcción del modelo predictivo supervisado** para el problema multiclase CTRL/AA/CRC, evaluando Logistic Regression, Random Forest, SVM RBF y PLS-DA.
-2. **Comparación de pipelines con y sin variables clínicas** (FIT, FOB), para cuantificar el aporte real de la lipidómica más allá del estándar clínico.
-3. **Validación cruzada estratificada** con reporte de F1-macro, AUC One-vs-Rest y matrices de confusión completas.
-4. **Integración del feedback biomédico** del equipo interdisciplinario sobre los hallazgos contenidos en [`docs/memorando_hallazgos_lipidomicos.pdf`](docs/memorando_hallazgos_lipidomicos.pdf).
+1. **Construcción del clasificador supervisado multiclase** (CTRL/AA/CRC) sobre las variables seleccionadas en el Paso 4, evaluando Logistic Regression con regularización (L2 / Elastic Net), Random Forest y SVM con kernel RBF.
+2. **Comparación de pipelines con y sin variables clínicas** (FIT, FOB) para cuantificar el aporte incremental real de la lipidómica respecto al estándar clínico actual.
+3. **Validación cruzada estratificada** con reporte de F1-macro, AUC One-vs-Rest, matriz de confusión y recall por clase, dada la asimetría de costos clínicos.
+4. **Interpretación robusta a multicolinealidad** mediante importancia por permutación o SHAP, en sustitución de coeficientes ingenuos o `feature_importances_` directos.
+5. **Discusión interdisciplinaria** con el equipo biomédico sobre los hallazgos del EDA y los resultados del modelado.
 
 ---
 
@@ -160,13 +159,13 @@ El artículo y los materiales suplementarios se distribuyen bajo licencia **Crea
 ## Referencias metodológicas
 
 - Albóniga, O. E. et al. (2025). Metabolic signature in combination with fecal immunochemical test as a non-invasive tool for advanced colorectal neoplasia diagnosis. *Cancers*, *17*(14), 2339.
-- Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: A practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B*, *57*(1), 289–300.
 - Box, G. E. P., & Cox, D. R. (1964). An analysis of transformations. *Journal of the Royal Statistical Society: Series B*, *26*(2), 211–252.
 - Brownlee, J. (2020). *How to choose a feature selection method for machine learning*. Machine Learning Mastery.
-- Costa, R. (2022). *The CRISP-ML methodology: A step-by-step approach to real-world machine learning projects*.
 - Galli, S. (2022). *Python feature engineering cookbook* (2.ª ed.). Packt Publishing.
 - Huang, C. Y., & Dai, H. L. (2021). Learning from class-imbalanced data: Review of data driven methods and algorithm driven methods. *Data Science in Finance and Economics*, *1*(1), 26–36.
-- Wold, S., Sjöström, M., & Eriksson, L. (2001). PLS-regression: A basic tool of chemometrics. *Chemometrics and Intelligent Laboratory Systems*, *58*(2), 109–130.
+- Kraskov, A., Stögbauer, H., & Grassberger, P. (2004). Estimating mutual information. *Physical Review E*, *69*(6), 066138.
+- Pearson, K. (1900). On the criterion that a given system of deviations from the probable in the case of a correlated system of variables is such that it can be reasonably supposed to have arisen from random sampling. *Philosophical Magazine Series 5*, *50*(302), 157–175.
+- Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., et al. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*, *12*, 2825–2830.
 
 ---
 
