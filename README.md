@@ -1,6 +1,6 @@
 # Proyecto Integrador — Equipo 22
 
-## Identificación de biomarcadores lipidómicos y metabolómicos para la detección temprana de cáncer colorrectal mediante modelos predictivos de inteligencia artificial
+## Análisis de la contribución de biomarcadores lipidómicos y metabolómicos en modelos de machine learning para cáncer de colon
 
 > **Avance 1 — Análisis Exploratorio de Datos (EDA)**
 > Proyecto Integrador · Maestría en Inteligencia Artificial Aplicada · Tecnológico de Monterrey
