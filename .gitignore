@@ -38,3 +38,6 @@ desktop.ini
 *.log
 results_local/
 outputs_local/
+
+# Outputs derivados del Avance 2 (reproducibles desde el notebook)
+notebooks/avance2_*.csv
