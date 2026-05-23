@@ -41,3 +41,7 @@ outputs_local/
 
 # Outputs derivados del Avance 2 (reproducibles desde el notebook)
 notebooks/avance2_*.csv
+
+# Excepciones: artefactos consumidos por el Avance 3 (deben versionarse para reproducibilidad)
+!notebooks/avance2_X_intersect.csv
+!notebooks/avance2_y.csv
