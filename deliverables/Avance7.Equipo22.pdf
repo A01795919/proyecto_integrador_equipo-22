@@ -1,0 +1,622 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R] /Count 9 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold /Encoding /WinAnsiEncoding >>
+endobj
+7 0 obj
+<< /Length 5587 >>
+stream
+BT /F2 18 Tf 1 0 0 1 54.0 788.0 Tm (Avance 7. Resumen ejecutivo) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 750.0 Tm (Equipo 22 Maria Virginia Mendizabal Miranda - A01796588 Gianmel Joannelly Hernandez Tosta -) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 737.0 Tm (A01795919 Sofia Ordaz Lopez - A01173717) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 717.0 Tm (Proyecto: Analisis de la contribucion de biomarcadores lipidomicos y metabolomicos en modelos de) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 704.0 Tm (machine learning para cancer colorrectal. Fecha: Junio de 2026 Entregable: Avance7.Equipo22) Tj ET
+BT /F2 13 Tf 1 0 0 1 54.0 676.0 Tm (1. Sintesis ejecutiva) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 651.0 Tm (El cancer colorrectal \(CRC\) es una de las principales causas de muerte por cancer a nivel) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 638.0 Tm (mundial. La oportunidad clinica mas valiosa no consiste solo en identificar cancer confirmado,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 625.0 Tm (sino en detectar adenoma avanzado \(AA\), lesion precursora que puede removerse mediante) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 612.0 Tm (colonoscopia antes de progresar a CRC. El proyecto evaluo si perfiles lipidomicos y metabolomicos) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 599.0 Tm (fecales, combinados con variables clinicas, contienen senal suficiente para clasificar tres) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 586.0 Tm (estados: control sano \(CTRL\), adenoma avanzado \(AA\) y cancer colorrectal \(CRC\).) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 566.0 Tm (La propuesta final es un modelo supervisado multiclase basado en Bagging Tree, entrenado sobre) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 553.0 Tm (una matriz parsimoniosa de 16 variables: 12 biomarcadores lipidomicos y 4 variables) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 540.0 Tm (clinicas/categoricas \(age, fit_ug_g, gender_Male, fob_YES\). El modelo alcanzo F1 macro de 0.855) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 527.0 Tm (en el conjunto held-out, AUC macro de 0.945 y F1 para AA de 0.78. Este resultado supera el) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 514.0 Tm (baseline de Regresion Logistica \(F1 macro = 0.628\), el arbol individual \(F1 held-out = 0.681\), el) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 501.0 Tm (antecedente multiclase PLS-DA reportado en el estudio original y los estudios comparativos) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 488.0 Tm (revisados, donde AA vs control no se evalua o no se discrimina con claridad.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 468.0 Tm (La recomendacion no es desplegar el sistema como diagnostico clinico autonomo. La recomendacion) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 455.0 Tm (es implementar un piloto controlado de apoyo a investigacion y triage experimental, con) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 442.0 Tm (validacion externa multicentrica, explicabilidad por paciente, monitoreo de drift y revision) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 429.0 Tm (etica. Bajo supuestos conservadores, el piloto tiene costos directos estimados de MXN 665,000) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 416.0 Tm (para 12 meses de validacion y operacion inicial, con beneficios potenciales de MXN 1.0 a 2.6) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 403.0 Tm (millones anuales en eficiencia operativa si se aplica a 1,000 pacientes de tamizaje de alto) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 390.0 Tm (riesgo, ademas de beneficios intangibles relevantes en prevencion, trazabilidad y aprendizaje) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 377.0 Tm (clinico.) Tj ET
+BT /F2 13 Tf 1 0 0 1 54.0 349.0 Tm (2. Sintesis del problema) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 324.0 Tm (El problema de negocio y salud publica es mejorar la deteccion temprana de lesiones colorrectales) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 311.0 Tm (relevantes, especialmente AA. Las pruebas no invasivas actuales, como FIT/FOB, son utiles para) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 298.0 Tm (tamizaje, pero presentan sensibilidad limitada para adenomas avanzados. En el dataset de) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 285.0 Tm (referencia, el propio estudio de Albóniga et al. \(2025\) reporta que el modelo multiclase PLS-DA) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 272.0 Tm (con FIT y esteres de colesterol no logra clasificar AA: la clase de mayor valor preventivo se) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 259.0 Tm (colapsa.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 239.0 Tm (El conjunto de datos utilizado contiene 211 observaciones de la cohorte del Hospital) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 226.0 Tm (Universitario de Ourense, con tres grupos clinicos: CTRL = 78, AA = 58 y CRC = 75. Incluye) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 213.0 Tm (variables clinicas y 127 lipidos medidos por UHPLC-MS. La pregunta central fue: puede un modelo) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 200.0 Tm (de machine learning, con preprocesamiento riguroso y seleccion de biomarcadores, discriminar los) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 187.0 Tm (tres estados de progresion de CRC mejor que los enfoques previos y sin depender exclusivamente de) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 174.0 Tm (FIT?) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 154.0 Tm (El valor de resolver este problema es doble. En el plano clinico, detectar AA abre una ventana de) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 141.0 Tm (prevencion antes del cancer invasivo. En el plano operativo, un modelo de triage podria priorizar) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 128.0 Tm (colonoscopias, orientar paneles lipidomicos dirigidos y generar evidencia para estudios) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 115.0 Tm (multicentricos posteriores.) Tj ET
+BT /F2 13 Tf 1 0 0 1 54.0 87.0 Tm (3. Comentarios y analisis de papers comparativos) Tj ET
+BT /F1 8 Tf 1 0 0 1 201.5 28.0 Tm (Avance 7. Resumen ejecutivo - Equipo 22 | Pagina 1) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 8500 >>
+stream
+BT /F1 10 Tf 1 0 0 1 54.0 788.0 Tm (Por indicacion de la Dra. Grettel, Aldo Ibanez realizo una busqueda bibliografica en Scopus para) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 775.0 Tm (ubicar articulos comparables al paper base. El material compartido incluye cuatro articulos) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 762.0 Tm (originales de los ultimos ocho anos con enfoque similar: metabolomica/lipidomica en muestras) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 749.0 Tm (fecales para distinguir CRC, adenoma/adenoma avanzado y controles sanos. La conclusion) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 736.0 Tm (transversal del analisis comparativo es importante para este proyecto: los estudios respaldan el) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 723.0 Tm (valor de metabolitos fecales para detectar CRC, pero ninguno resuelve de forma robusta la) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 710.0 Tm (discriminacion AA vs controles sanos.) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 690.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F4 7 Tf 1 0 0 1 54.0 680.0 Tm (Articulo       | Muestra        | Metodos        | Resultado      | AA vs CTRL    ) Tj ET
+BT /F4 7 Tf 1 0 0 1 54.0 670.0 Tm (comparativo    |                | principales    | clave          |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 660.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 650.0 Tm (Metabolomic    | 35 CRC, 37     | UHPLC-MS/MS,   | Detecto 1641   | No            ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 640.0 Tm (analysis of    | CRA, 30        | PCA, OPLS-DA,  | metabolitos;   |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 630.0 Tm (gut            | controles      | prueba de      | reporto        |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 620.0 Tm (metabolites in | sanos          | permutacion,   | metabolitos    |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 610.0 Tm (patients       |                | analisis       | asociados a    |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 600.0 Tm (\(Oncology      |                | univariado,    | CRC vs         |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 590.0 Tm (Letters, 2023\) |                | ROC y          | controles y    |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 580.0 Tm (               |                | supervivencia  | CRA vs         |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 570.0 Tm (               |                | global         | controles      |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 560.0 Tm (A novel        | Tres lotes:    | CV%, PCA, PLS- | PLS-DA/OPLS-DA | No; CTL y AD  ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 550.0 Tm (approach on    | CTL, AD y CRC; | DA, OPLS-DA,   | separaron      | no tuvieron   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 540.0 Tm (the use of     | total con      | ANOVA,         | visualmente,   | diferencias   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 530.0 Tm (samples from   | predominio de  | t-test/Mann-   | pero no        | suficientes   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 520.0 Tm (faecal occult  | CTL/AD y pocos | Whitney        | pasaron        |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 510.0 Tm (blood          | CRC en lote 3  |                | criterios de   |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 500.0 Tm (screening kits |                |                | validacion;    |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 490.0 Tm (for            |                |                | diferencias    |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 480.0 Tm (metabolomics   |                |                | significativas |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 470.0 Tm (analysis       |                |                | solo CTL vs    |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 460.0 Tm (\(Metabolites,  |                |                | CRC o AD vs    |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 450.0 Tm (2023\)          |                |                | CRC            |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 440.0 Tm (A              | 40 controles,  | UHPLC-MS/MS,   | RF multiclase  | No            ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 430.0 Tm (comprehensive  | 40 AA, 40 CRC  | PCA, Random    | obtuvo 52% de  |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 420.0 Tm (metabolomics   |                | Forest,        | exactitud; CTL |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 410.0 Tm (analysis of    |                | Regresion      | y AA se        |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 400.0 Tm (fecal samples  |                | Logistica,     | confundieron   |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 390.0 Tm (from advanced  |                | k-fold CV y    | con            |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 380.0 Tm (adenoma and    |                | LOOCV          | frecuencia;    |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 370.0 Tm (colorectal     |                |                | fusion CTL+AA  |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 360.0 Tm (cancer         |                |                | vs CRC alcanzo |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 350.0 Tm (patients       |                |                | 75%            |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 340.0 Tm (\(Metabolites,  |                |                |                |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 330.0 Tm (2022\)          |                |                |                |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 320.0 Tm (Targeted UPLC- | 40 AA, 40 CRC, | UPLC-MS,       | ChoE y FOB     | No            ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 310.0 Tm (MS metabolic   | 49 controles   | ANOVA, PCA,    | mejoraron la   |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 300.0 Tm (analysis of    |                | PLS-DA,        | discriminacion |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 290.0 Tm (human faeces   |                | Regresion      | de CRC; siete  |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 280.0 Tm (reveals novel  |                | Logistica y    | metabolitos    |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 270.0 Tm (low-invasive   |                | ROC            | mas FOB        |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 260.0 Tm (candidate      |                |                | alcanzaron AUC |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 250.0 Tm (markers for    |                |                | mediana de     |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 240.0 Tm (colorectal     |                |                | 0.885          |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 230.0 Tm (cancer         |                |                |                |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 220.0 Tm (\(Cancers,      |                |                |                |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 210.0 Tm (2018\)          |                |                |                |               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 200.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 184.0 Tm (El benchmark externo refuerza tres comentarios ejecutivos. Primero, la metabolomica fecal es una) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 171.0 Tm (via biologicamente plausible y metodologicamente consistente: los cuatro estudios usan) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 158.0 Tm (espectrometria de masas y reportan senales en esfingolipidos, esteres de colesterol,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 145.0 Tm (trigliceridos, hemoglobina fecal u otros metabolitos. Segundo, la literatura converge en una) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 132.0 Tm (dificultad especifica: AA tiende a parecerse mas a controles que a CRC, por lo que los enfoques) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 119.0 Tm (no supervisados \(PCA/PLS-DA\) o las comparaciones binarias tienden a ocultar justamente la clase) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 106.0 Tm (preventiva mas importante. Tercero, nuestro proyecto aporta una mejora diferencial porque formula) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 93.0 Tm (el problema como clasificacion multiclase desde el inicio, reporta metricas por clase y logra F1) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 80.0 Tm (AA = 0.78 con Bagging Tree, en lugar de colapsar AA con controles o con CRC.) Tj ET
+BT /F1 8 Tf 1 0 0 1 201.5 28.0 Tm (Avance 7. Resumen ejecutivo - Equipo 22 | Pagina 2) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6666 >>
+stream
+BT /F1 10 Tf 1 0 0 1 54.0 788.0 Tm (Estos papers tambien ayudan a interpretar los biomarcadores seleccionados. La aparicion repetida) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 775.0 Tm (de familias como ChoE/CE, SM y TG en la literatura es coherente con variables relevantes de) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 762.0 Tm (nuestro modelo, como CE\(20:5\), TG\(51:4\), SM\(d18:0/18:0\) y PC\(O-16:0/16:0\). Por tanto, el modelo) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 749.0 Tm (no solo mejora el desempeno tecnico; tambien mantiene continuidad biologica con hallazgos) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 736.0 Tm (previos.) Tj ET
+BT /F2 13 Tf 1 0 0 1 54.0 708.0 Tm (4. Hallazgos principales del EDA) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 683.0 Tm (El analisis exploratorio confirmo que el dataset es pequeno pero informativo. La distribucion de) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 670.0 Tm (clases tiene desbalance leve: CTRL 37.0%, CRC 35.5% y AA 27.5%, por lo que Macro F1 fue elegida) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 657.0 Tm (como metrica principal para no ocultar el desempeno de AA.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 637.0 Tm (La calidad de datos requirio decisiones explicitas. Se identificaron 27 lipidos con mas de 20% de) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 624.0 Tm (valores faltantes y 5 con mas de 40%, que fueron eliminados. El mecanismo de ausencia no fue) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 611.0 Tm (aleatorio: 13 de 56 lipidos evaluados tuvieron missingness dependiente del grupo \(chi-cuadrada, p) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 598.0 Tm (< 0.05\). Este patron es compatible con concentraciones por debajo del limite de deteccion, mas) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 585.0 Tm (frecuentes en controles para ciertos lipidos elevados en CRC. Por ello se eligio imputacion por) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 572.0 Tm (mediana de grupo y se valido contra MICE. La mediana de grupo preservo mejor la estructura de) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 559.0 Tm (correlacion \(norma de Frobenius 3.24 vs 13.58\).) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 539.0 Tm (Las distribuciones lipidomicas presentaban alta asimetria. Box-Cox fue la transformacion) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 526.0 Tm (seleccionada porque redujo la mediana de skewness absoluta de aproximadamente 5.47 a 0.03.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 513.0 Tm (Despues de transformar, se detectaron 769 outliers sobre 25,742 celdas \(2.99%\), una tasa) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 500.0 Tm (razonable para mediciones biologicas.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 480.0 Tm (En el analisis multivariado, PCA mostro superposicion sustancial entre CTRL, AA y CRC, lo que) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 467.0 Tm (indica que la senal no aparece en los ejes no supervisados de maxima varianza. En contraste, la) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 454.0 Tm (seleccion supervisada si identifico biomarcadores discriminativos. fob_YES fue una variable) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 441.0 Tm (categorica altamente informativa \(chi-cuadrada = 23.9\), mientras que entre las numericas) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 428.0 Tm (destacaron lipidos como GlcCer\(d18:1/24:0\), CE\(20:5\), TG\(51:4\) y PC\(O-16:0/16:0\). Tambien se) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 415.0 Tm (observo multicolinealidad relevante: la correlacion intra-familia fue aproximadamente cinco veces) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 402.0 Tm (mayor que la inter-familia, por lo que la parsimonia de features se volvio una decision critica.) Tj ET
+BT /F2 13 Tf 1 0 0 1 54.0 374.0 Tm (5. Modelos generados y eleccion del modelo final) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 349.0 Tm (La evolucion de modelos siguio la logica CRISP-ML\(Q\): baseline interpretable, modelo individual y) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 336.0 Tm (ensamble. Primero se entreno Regresion Logistica multiclase sobre X_intersect, obteniendo F1) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 323.0 Tm (macro de 0.628, F1 para AA de 0.38 y recall AA de 0.47. Este baseline mostro viabilidad) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 310.0 Tm (predictiva, pero tambien revelo que AA era la clase dificil.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 290.0 Tm (Despues se evaluo un Decision Tree individual. El arbol mejoro el F1 macro a 0.707 en validacion) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 277.0 Tm (cruzada y 0.681 en held-out, con recall AA cercano a 0.50. Este modelo aporto interpretabilidad,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 264.0 Tm (pero presento alta varianza e inestabilidad esperada en datasets pequenos.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 244.0 Tm (Finalmente se evaluaron modelos ensemble. El modelo seleccionado fue Bagging Tree sobre) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 231.0 Tm (X_intersect, con 100 arboles agregados por bootstrap. Fue elegido porque redujo la varianza del) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 218.0 Tm (arbol individual, mantuvo interpretabilidad razonable mediante importancia de variables y obtuvo) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 205.0 Tm (el mejor equilibrio entre desempeno, parsimonia y utilidad clinica. Sus resultados principales) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 192.0 Tm (fueron:) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 172.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F4 7 Tf 1 0 0 1 54.0 162.0 Tm (Metrica                                 | Resultado                              ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 152.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 142.0 Tm (F1 macro held-out                       | 0.855                                  ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 132.0 Tm (F1 macro CV                             | 0.802                                  ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 122.0 Tm (AUC ROC macro                           | 0.945                                  ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 112.0 Tm (F1 AA                                   | 0.78                                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 102.0 Tm (Recall AA                               | 0.75                                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 92.0 Tm (Recall CRC                              | 0.93                                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 82.0 Tm (Precision CTRL                          | 1.00                                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 72.0 Tm (Numero de features                      | 16                                     ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 62.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F1 8 Tf 1 0 0 1 201.5 28.0 Tm (Avance 7. Resumen ejecutivo - Equipo 22 | Pagina 3) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 6595 >>
+stream
+BT /F2 11 Tf 1 0 0 1 54.0 788.0 Tm (5.1 Visualizacion ejecutiva de hallazgos) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 768.0 Tm (La figura sintetiza el hallazgo mas importante para un tomador de decisiones: la clase AA, que es) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 755.0 Tm (la ventana preventiva del proceso clinico, pasa de no estar resuelta en el benchmark multiclase) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 742.0 Tm (previo a obtener desempeno util con el modelo final. En este grafico, la escala se interpreta) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 729.0 Tm (como F1 para AA cuando esta disponible; para Top 15 se reporta el valor exploratorio observado en) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 716.0 Tm (held-out.) Tj ET
+q 0.965 0.980 0.995 rg 54 452 487 240 re f Q
+q 0.650 0.720 0.790 RG 0.7 w 54 452 487 240 re S Q
+BT /F2 11 Tf 1 0 0 1 54.0 678.0 Tm (Figura 1. Recuperacion de la clase preventiva AA) Tj ET
+BT /F1 8 Tf 1 0 0 1 54.0 663.0 Tm (Comparacion de desempeno reportado o estimado por etapa/modelo) Tj ET
+q 0.82 0.86 0.90 RG 0.4 w 239.0 497.0 m 239.0 640.0 l S Q
+BT /F1 7 Tf 1 0 0 1 230.0 490.0 Tm (0.00) Tj ET
+q 0.82 0.86 0.90 RG 0.4 w 301.5 497.0 m 301.5 640.0 l S Q
+BT /F1 7 Tf 1 0 0 1 292.0 490.0 Tm (0.25) Tj ET
+q 0.82 0.86 0.90 RG 0.4 w 364.0 497.0 m 364.0 640.0 l S Q
+BT /F1 7 Tf 1 0 0 1 355.0 490.0 Tm (0.50) Tj ET
+q 0.82 0.86 0.90 RG 0.4 w 426.5 497.0 m 426.5 640.0 l S Q
+BT /F1 7 Tf 1 0 0 1 417.0 490.0 Tm (0.75) Tj ET
+q 0.82 0.86 0.90 RG 0.4 w 489.0 497.0 m 489.0 640.0 l S Q
+BT /F1 7 Tf 1 0 0 1 480.0 490.0 Tm (1.00) Tj ET
+BT /F2 8 Tf 1 0 0 1 72.0 630.0 Tm (PLS-DA paper base) Tj ET
+BT /F1 7 Tf 1 0 0 1 72.0 619.0 Tm (AA no clasificada) Tj ET
+q 0.90 0.93 0.96 rg 239 616.0 250 16 re f Q
+q 0.70 0.20 0.20 rg 239 616.0 0.0 16 re f Q
+BT /F2 8 Tf 1 0 0 1 501.0 629.0 Tm (0.00) Tj ET
+BT /F2 8 Tf 1 0 0 1 72.0 602.0 Tm (Regresion Logistica) Tj ET
+BT /F1 7 Tf 1 0 0 1 72.0 591.0 Tm (baseline interpretable) Tj ET
+q 0.90 0.93 0.96 rg 239 588.0 250 16 re f Q
+q 0.82 0.55 0.16 rg 239 588.0 95.0 16 re f Q
+BT /F2 8 Tf 1 0 0 1 501.0 601.0 Tm (0.38) Tj ET
+BT /F2 8 Tf 1 0 0 1 72.0 574.0 Tm (Decision Tree) Tj ET
+BT /F1 7 Tf 1 0 0 1 72.0 563.0 Tm (modelo individual) Tj ET
+q 0.90 0.93 0.96 rg 239 560.0 250 16 re f Q
+q 0.28 0.55 0.32 rg 239 560.0 137.5 16 re f Q
+BT /F2 8 Tf 1 0 0 1 501.0 573.0 Tm (0.55) Tj ET
+BT /F2 8 Tf 1 0 0 1 72.0 546.0 Tm (Bagging Tree final) Tj ET
+BT /F1 7 Tf 1 0 0 1 72.0 535.0 Tm (modelo elegido) Tj ET
+q 0.90 0.93 0.96 rg 239 532.0 250 16 re f Q
+q 0.08 0.42 0.60 rg 239 532.0 195.0 16 re f Q
+BT /F2 8 Tf 1 0 0 1 501.0 545.0 Tm (0.78) Tj ET
+BT /F2 8 Tf 1 0 0 1 72.0 518.0 Tm (Top 15 candidato) Tj ET
+BT /F1 7 Tf 1 0 0 1 72.0 507.0 Tm (validacion futura) Tj ET
+q 0.90 0.93 0.96 rg 239 504.0 250 16 re f Q
+q 0.08 0.42 0.60 rg 239 504.0 207.5 16 re f Q
+BT /F2 8 Tf 1 0 0 1 501.0 517.0 Tm (0.83) Tj ET
+BT /F1 8 Tf 1 0 0 1 54.0 477.0 Tm (Lectura: la mejora clave no es solo global; es recuperar AA, la ventana de prevencion.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 442.0 Tm (La eleccion de X_intersect se justifica porque concentra senal robusta bajo dos criterios) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 429.0 Tm (independientes: Mutual Information y ANOVA. Tambien evita el riesgo de sobreajuste asociado con) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 416.0 Tm (X_full \(131 variables\). Como analisis complementario, X_full Top 15 con Bagging Tree conservo) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 403.0 Tm (Recall AA = 0.833 y F1 AA = 0.833, por lo que queda como candidato para validacion futura, pero) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 390.0 Tm (no reemplaza al modelo final hasta completar nested CV y validacion externa.) Tj ET
+BT /F2 13 Tf 1 0 0 1 54.0 362.0 Tm (6. Recomendaciones clave de implementacion) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 337.0 Tm (La implementacion debe realizarse como piloto controlado, no como herramienta diagnostica) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 324.0 Tm (autonoma. El objetivo del piloto es validar integracion tecnica, estabilidad del pipeline y) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 311.0 Tm (utilidad para priorizacion experimental.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 291.0 Tm (Las acciones prioritarias son:) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 271.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F4 7 Tf 1 0 0 1 54.0 261.0 Tm (Recomendacion      | Responsable        | Entregable         | Prioridad         ) Tj ET
+BT /F4 7 Tf 1 0 0 1 54.0 251.0 Tm (                   |                    | esperado           |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 241.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 231.0 Tm (Validar el modelo  | Patrocinador       | Reporte de         | Alta              ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 221.0 Tm (con cohorte        | academico y equipo | metricas externas  |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 211.0 Tm (externa            | clinico            | vs internas        |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 201.0 Tm (independiente,     |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 191.0 Tm (idealmente n >=    |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 181.0 Tm (200 y              |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 171.0 Tm (multicentrica      |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 161.0 Tm (Regularizar        | Equipo de ciencia  | Modelo con brecha  | Alta              ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 151.0 Tm (Bagging Tree       | de datos           | train-CV menor a   |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 141.0 Tm (\(max_depth=7-10, m |                    | 0.10               |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 131.0 Tm (in_samples_leaf=3- |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 121.0 Tm (5\)                 |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 111.0 Tm (Generar            | Equipo ML y equipo | Reporte            | Alta              ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 101.0 Tm (explicabilidad     | clinico            | interpretativo por |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 91.0 Tm (SHAP por paciente  |                    | prediccion         |                   ) Tj ET
+BT /F1 8 Tf 1 0 0 1 201.5 28.0 Tm (Avance 7. Resumen ejecutivo - Equipo 22 | Pagina 4) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 7481 >>
+stream
+BT /F3 7 Tf 1 0 0 1 54.0 788.0 Tm (Disenar panel      | Laboratorio de     | Lista de           | Alta              ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 778.0 Tm (lipidomico         | espectrometria y   | biomarcadores y    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 768.0 Tm (reducido basado en | equipo ML          | protocolo MRM/SRM  |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 758.0 Tm (Top 15             |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 748.0 Tm (Aprobar protocolo  | Comite de etica    | Protocolo aprobado | Alta              ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 738.0 Tm (etico y            |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 728.0 Tm (consentimiento     |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 718.0 Tm (informado          |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 708.0 Tm (Implementar        | Equipo             | Endpoint,          | Media-alta        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 698.0 Tm (prototipo en       | tecnico/MLOps      | monitoreo y        |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 688.0 Tm (Google Vertex AI   |                    | dashboard interno  |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 678.0 Tm (Monitorear data    | Equipo MLOps       | Alertas y reporte  | Alta              ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 668.0 Tm (drift, prediction  |                    | mensual            |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 658.0 Tm (drift y tasa de    |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 648.0 Tm (deteccion AA       |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 638.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 622.0 Tm (Google Vertex AI se recomienda como plataforma inicial por su continuidad con notebooks,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 609.0 Tm (pipelines reproducibles, Model Registry, monitoreo de drift y capacidad de escalar hacia) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 596.0 Tm (validacion multicentrica. AWS SageMaker y Azure ML son alternativas viables si el hospital ya) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 583.0 Tm (opera con esos ecosistemas.) Tj ET
+BT /F2 13 Tf 1 0 0 1 54.0 555.0 Tm (7. Analisis costo-beneficio) Tj ET
+BT /F2 11 Tf 1 0 0 1 54.0 525.0 Tm (7.1 Supuestos de planeacion) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 505.0 Tm (Las cifras siguientes son estimaciones para presentar a stakeholders y deben refinarse con) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 492.0 Tm (cotizaciones institucionales. Se usa MXN como moneda de planeacion. Para servicios cloud) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 479.0 Tm (internacionales se asume una paridad interna de referencia de 1 USD = MXN 18.50. El costo de hora) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 466.0 Tm (tecnica se estima en MXN 350 para trabajo academico/prototipo. El costo de metabolomica no) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 453.0 Tm (dirigida se estima en MXN 9,250 por muestra \(aprox. USD 500\) y el panel dirigido MRM/SRM en MXN) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 440.0 Tm (1,850 por muestra \(aprox. USD 100\), conforme a rangos comunes citados en el Avance 6.) Tj ET
+BT /F2 11 Tf 1 0 0 1 54.0 415.0 Tm (7.2 Costos incurridos por fase CRISP-ML\(Q\)) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 395.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F4 7 Tf 1 0 0 1 54.0 385.0 Tm (Fase CRISP-ML\(Q\)   | Concepto           | Supuesto           | Costo estimado    ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 375.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 365.0 Tm (Business & Data    | Adquisicion de     | Dataset y paper    | MXN 0             ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 355.0 Tm (Understanding      | datos y articulo   | bajo acceso        |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 345.0 Tm (                   | base               | abierto/CC BY 4.0  |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 335.0 Tm (Business & Data    | Revision           | 24 h tecnicas      | MXN 8,400         ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 325.0 Tm (Understanding      | bibliografica y    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 315.0 Tm (                   | definicion del     |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 305.0 Tm (                   | problema           |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 295.0 Tm (Data Preparation   | Limpieza,          | 60 h tecnicas      | MXN 21,000        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 285.0 Tm (                   | reconstruccion de  |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 275.0 Tm (                   | encabezados,       |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 265.0 Tm (                   | imputacion, Box-   |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 255.0 Tm (                   | Cox                |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 245.0 Tm (Data Preparation   | Computo local y    | Laptop existente,  | MXN 0             ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 235.0 Tm (                   | almacenamiento     | sin hardware       |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 225.0 Tm (                   |                    | dedicado           |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 215.0 Tm (Modeling           | Entrenamiento de   | 45 h tecnicas      | MXN 15,750        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 205.0 Tm (                   | baseline, arbol,   |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 195.0 Tm (                   | ensembles y        |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 185.0 Tm (                   | seleccion de       |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 175.0 Tm (                   | features           |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 165.0 Tm (Evaluation         | Validacion         | 35 h tecnicas      | MXN 12,250        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 155.0 Tm (                   | cruzada, held-out, |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 145.0 Tm (                   | analisis Top-K y   |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 135.0 Tm (                   | metricas por clase |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 125.0 Tm (Deployment         | Arquitectura       | 30 h tecnicas      | MXN 10,500        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 115.0 Tm (planning           | cloud,             |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 105.0 Tm (                   | recomendaciones y  |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 95.0 Tm (                   | documentacion      |                    |                   ) Tj ET
+BT /F1 8 Tf 1 0 0 1 201.5 28.0 Tm (Avance 7. Resumen ejecutivo - Equipo 22 | Pagina 5) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 7894 >>
+stream
+BT /F3 7 Tf 1 0 0 1 54.0 788.0 Tm (Documentation      | Integracion de     | 25 h tecnicas      | MXN 8,750         ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 778.0 Tm (                   | avances y reporte  |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 768.0 Tm (                   | ejecutivo          |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 758.0 Tm (Servidores/cloud   | Ejecucion          | Costo incremental  | MXN 0             ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 748.0 Tm (usados hasta la    | local/notebooks;   | minimo             |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 738.0 Tm (fecha              | sin endpoint       |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 728.0 Tm (                   | persistente        |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 718.0 Tm (Software           | Python, scikit-    | Open source        | MXN 0             ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 708.0 Tm (                   | learn, pandas,     |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 698.0 Tm (                   | Jupyter, Git       |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 688.0 Tm (Total incurrido    |                    | 219 h tecnicas     | MXN 76,650        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 678.0 Tm (estimado           |                    |                    |                   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 668.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F2 11 Tf 1 0 0 1 54.0 647.0 Tm (7.3 Costos esperados de operacion y mantenimiento) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 627.0 Tm (Se plantea un piloto de 12 meses con 200 muestras externas para validacion y uso controlado sobre) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 614.0 Tm (1,000 predicciones de triage experimental.) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 594.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F4 7 Tf 1 0 0 1 54.0 584.0 Tm (Componente                | Supuesto                  | Costo anual estimado     ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 574.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 564.0 Tm (Panel lipidomico dirigido | 200 muestras x MXN 1,850  | MXN 370,000              ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 554.0 Tm (para validacion externa   |                           |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 544.0 Tm (Preparacion y control de  | 80 h tecnicas             | MXN 28,000               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 534.0 Tm (calidad de datos externos |                           |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 524.0 Tm (Ajuste/regularizacion y   | 60 h tecnicas             | MXN 21,000               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 514.0 Tm (nested CV                 |                           |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 504.0 Tm (SHAP, reporte clinico e   | 50 h tecnicas             | MXN 17,500               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 494.0 Tm (interpretabilidad         |                           |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 484.0 Tm (Cloud Vertex AI Workbench | MXN 3,500 mensuales       | MXN 42,000               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 474.0 Tm (/Pipelines/Registry       |                           |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 464.0 Tm (Endpoint online y batch   | MXN 2,800 mensuales       | MXN 33,600               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 454.0 Tm (prediction                |                           |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 444.0 Tm (Monitoreo de drift y      | 10 h/mes                  | MXN 42,000               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 434.0 Tm (auditoria mensual         |                           |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 424.0 Tm (Seguridad, documentacion  | 60 h tecnicas             | MXN 21,000               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 414.0 Tm (etica y trazabilidad      |                           |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 404.0 Tm (Mantenimiento             | 8 h/mes                   | MXN 33,600               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 394.0 Tm (correctivo/evolutivo      |                           |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 384.0 Tm (Reserva de contingencia   | 10% del subtotal          | MXN 56,970               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 374.0 Tm (Total operacion +         |                           | MXN 665,670              ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 364.0 Tm (validacion 12 meses       |                           |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 354.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 338.0 Tm (Si el modelo pasa a uso rutinario posterior al piloto, el costo recurrente sin validacion externa) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 325.0 Tm (intensiva bajaria aproximadamente a MXN 150,000-220,000 anuales, mas el costo variable de) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 312.0 Tm (muestras lipidomicas procesadas.) Tj ET
+BT /F2 11 Tf 1 0 0 1 54.0 287.0 Tm (7.4 Beneficios cuantificables) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 267.0 Tm (Los beneficios se estiman para una cohorte anual de 1,000 pacientes en tamizaje de alto riesgo o) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 254.0 Tm (derivados por sospecha clinica. No se asume que el modelo sustituya la colonoscopia; se asume que) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 241.0 Tm (mejora priorizacion y reduce procedimientos innecesarios una vez validado.) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 221.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F4 7 Tf 1 0 0 1 54.0 211.0 Tm (Beneficio                 | Supuesto conservador      | Valor anual estimado     ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 201.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 191.0 Tm (Reduccion de              | Evitar 10% de             | MXN 560,000              ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 181.0 Tm (colonoscopias             | colonoscopias en          |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 171.0 Tm (innecesarias en controles | pacientes de bajo riesgo; |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 161.0 Tm (                          | 70 procedimientos x MXN   |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 151.0 Tm (                          | 8,000                     |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 141.0 Tm (Priorizacion temprana de  | 40 AA adicionales         | MXN 480,000              ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 131.0 Tm (AA                        | priorizados antes; ahorro |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 121.0 Tm (                          | operativo y clinico proxy |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 111.0 Tm (                          | de MXN 12,000 por caso    |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 101.0 Tm (Sustitucion parcial de    | 200 muestras: ahorro de   | MXN 1,480,000            ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 91.0 Tm (metabolomica no dirigida  | MXN 7,400 por muestra     |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 81.0 Tm (por panel dirigido        |                           |                          ) Tj ET
+BT /F1 8 Tf 1 0 0 1 201.5 28.0 Tm (Avance 7. Resumen ejecutivo - Equipo 22 | Pagina 6) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 7529 >>
+stream
+BT /F3 7 Tf 1 0 0 1 54.0 788.0 Tm (Reduccion de retrabajo    | 120 h clinico-tecnicas x  | MXN 60,000               ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 778.0 Tm (analitico y revision      | MXN 500                   |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 768.0 Tm (manual                    |                           |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 758.0 Tm (Beneficio anual potencial | Escenario con panel       | MXN 2,580,000            ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 748.0 Tm (bruto                     | dirigido y triage         |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 738.0 Tm (                          | validado                  |                          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 728.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 712.0 Tm (En un escenario prudente, aplicando solo 40% de captura efectiva por incertidumbre de adopcion,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 699.0 Tm (el beneficio anual seria MXN 1,032,000. Comparado con el costo anual del piloto \(MXN 665,670\), el) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 686.0 Tm (retorno potencial seria positivo \(beneficio/costo aproximado de 1.55\). En un escenario completo,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 673.0 Tm (el beneficio/costo podria acercarse a 3.9. Estas cifras no deben interpretarse como ROI clinico) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 660.0 Tm (definitivo, sino como racional economico para financiar la validacion.) Tj ET
+BT /F2 11 Tf 1 0 0 1 54.0 635.0 Tm (7.5 Beneficios intangibles) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 615.0 Tm (El proyecto aporta beneficios cualitativos importantes. Primero, transforma mediciones) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 602.0 Tm (lipidomicas complejas en una herramienta interpretable para investigacion clinica. Segundo,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 589.0 Tm (mejora la trazabilidad de decisiones mediante CRISP-ML\(Q\), versionamiento del pipeline y) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 576.0 Tm (monitoreo. Tercero, permite generar hipotesis biologicas sobre biomarcadores como CE\(20:5\),) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 563.0 Tm (TG\(51:4\) y PC\(O-16:0/16:0\). Cuarto, ayuda a construir capacidades institucionales de MLOps) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 550.0 Tm (responsable en salud. Finalmente, enfoca la atencion en AA, clase que representa la ventana) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 537.0 Tm (preventiva mas valiosa.) Tj ET
+BT /F2 13 Tf 1 0 0 1 54.0 509.0 Tm (8. Riesgos y desafios de la solucion) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 484.0 Tm (La clasificacion de riesgos sigue cuatro categorias solicitadas en los recursos de la semana:) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 471.0 Tm (datos, ataques, prueba y confianza, y cumplimiento.) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 451.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F4 7 Tf 1 0 0 1 54.0 441.0 Tm (Categoria          | Riesgo             | Impacto            | Mitigacion        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 431.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 421.0 Tm (Datos              | Cohorte unica de   | Sobreestimacion    | Validacion externa) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 411.0 Tm (                   | Ourense y n        | del desempeno y    | multicentrica con ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 401.0 Tm (                   | pequeno \(211       | baja               | n >= 200 antes de ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 391.0 Tm (                   | muestras\)          | generalizacion     | uso clinico       ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 381.0 Tm (Datos              | Missingness        | Sesgo si se imputa | Mantener          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 371.0 Tm (                   | MAR/MNAR por       | de forma global o  | imputacion        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 361.0 Tm (                   | limite de          | se ignora la       | validada,         ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 351.0 Tm (                   | deteccion          | ausencia           | indicadores de    ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 341.0 Tm (                   |                    | informativa        | ausencia y        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 331.0 Tm (                   |                    |                    | auditoria por     ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 321.0 Tm (                   |                    |                    | grupo             ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 311.0 Tm (Datos              | Drift por cambios  | Degradacion        | Monitoreo de data ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 301.0 Tm (                   | en protocolo       | silenciosa del     | drift y           ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 291.0 Tm (                   | UHPLC-MS o         | modelo             | recalibracion     ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 281.0 Tm (                   | poblacion          |                    | documentada       ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 271.0 Tm (Datos              | Multicolinealidad  | Importancias       | Seleccion         ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 261.0 Tm (                   | lipidomica         | inestables y       | parsimoniosa, SHAP) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 251.0 Tm (                   |                    | explicaciones      | con cautela y     ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 241.0 Tm (                   |                    | fragiles           | validacion        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 231.0 Tm (                   |                    |                    | biologica         ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 221.0 Tm (Ataques            | Acceso no          | Riesgo de          | Anonimizacion,    ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 211.0 Tm (                   | autorizado a datos | privacidad y dano  | IAM, cifrado,     ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 201.0 Tm (                   | de salud           | reputacional       | bitacoras y minimo) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 191.0 Tm (                   |                    |                    | privilegio        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 181.0 Tm (Ataques            | Envenenamiento de  | Modelo sesgado o   | Reentrenamiento   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 171.0 Tm (                   | datos en           | inseguro           | solo con cohortes ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 161.0 Tm (                   | reentrenamiento    |                    | aprobadas y       ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 151.0 Tm (                   |                    |                    | revision de       ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 141.0 Tm (                   |                    |                    | calidad           ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 131.0 Tm (Ataques            | Manipulacion de    | Predicciones no    | Validaciones de   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 121.0 Tm (                   | entrada o uso      | confiables         | schema, rangos    ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 111.0 Tm (                   | fuera de contexto  |                    | biologicos y      ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 101.0 Tm (                   |                    |                    | alertas de        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 91.0 Tm (                   |                    |                    | anomalia          ) Tj ET
+BT /F1 8 Tf 1 0 0 1 201.5 28.0 Tm (Avance 7. Resumen ejecutivo - Equipo 22 | Pagina 7) Tj ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 6697 >>
+stream
+BT /F3 7 Tf 1 0 0 1 54.0 788.0 Tm (Prueba y confianza | Sobreajuste del    | Desempeno menor en | Regularizacion,   ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 778.0 Tm (                   | Bagging Tree       | poblaciones nuevas | nested CV y       ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 768.0 Tm (                   | \(Train F1 = 1.00\)  |                    | evaluacion externa) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 758.0 Tm (Prueba y confianza | Varianza del held- | Confianza excesiva | Reportar F1 CV =  ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 748.0 Tm (                   | out pequeno \(n =   | en F1 = 0.855      | 0.802 como        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 738.0 Tm (                   | 43\)                |                    | estimacion        ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 728.0 Tm (                   |                    |                    | conservadora      ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 718.0 Tm (Prueba y confianza | AA es              | Falsos negativos   | Optimizar umbrales) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 708.0 Tm (                   | biologicamente     | en la clase        | por clase y       ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 698.0 Tm (                   | heterogeneo        | preventiva clave   | estudiar subtipos ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 688.0 Tm (                   |                    |                    | de AA             ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 678.0 Tm (Prueba y confianza | Explicabilidad     | Baja confianza del | SHAP por paciente ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 668.0 Tm (                   | insuficiente para  | usuario            | y revision con    ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 658.0 Tm (                   | adopcion clinica   |                    | especialistas     ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 648.0 Tm (Cumplimiento       | Uso como           | Riesgo regulatorio | Limitar el piloto ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 638.0 Tm (                   | dispositivo medico | y etico            | a investigacion;  ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 628.0 Tm (                   | sin validacion     |                    | no usar como      ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 618.0 Tm (                   |                    |                    | diagnostico       ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 608.0 Tm (                   |                    |                    | autonomo          ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 598.0 Tm (Cumplimiento       | Consentimiento y   | Incumplimiento     | Protocolo aprobado) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 588.0 Tm (                   | uso secundario de  | etico/legal        | por comite de     ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 578.0 Tm (                   | datos lipidomicos  |                    | etica y           ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 568.0 Tm (                   |                    |                    | consentimiento    ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 558.0 Tm (                   |                    |                    | explicito         ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 548.0 Tm (Cumplimiento       | Transferencia      | Riesgo normativo   | Datos             ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 538.0 Tm (                   | internacional o    |                    | anonimizados,     ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 528.0 Tm (                   | cloud de datos     |                    | region cloud      ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 518.0 Tm (                   | sensibles          |                    | definida, DPA/BAA ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 508.0 Tm (                   |                    |                    | si aplica         ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 498.0 Tm (Cumplimiento       | Sesgo por          | Inequidad en       | Reporte           ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 488.0 Tm (                   | poblacion no       | desempeno          | estratificado por ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 478.0 Tm (                   | representativa     |                    | sexo, edad, centro) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 468.0 Tm (                   |                    |                    | y subpoblacion    ) Tj ET
+BT /F3 7 Tf 1 0 0 1 54.0 458.0 Tm (------------------------------------------------------------------------------------------------) Tj ET
+BT /F2 13 Tf 1 0 0 1 54.0 434.0 Tm (9. Cierre ejecutivo) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 409.0 Tm (El proyecto demuestra que existe senal lipidomica util para clasificar CTRL, AA y CRC, y que un) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 396.0 Tm (ensemble de arboles con seleccion parsimoniosa de biomarcadores supera claramente los modelos) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 383.0 Tm (previos evaluados. La contribucion central no es solo el F1 macro de 0.855, sino la recuperacion) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 370.0 Tm (de desempeno en AA, clase que el antecedente multiclase no lograba detectar.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 350.0 Tm (La decision ejecutiva recomendada es financiar un piloto controlado de 12 meses. El costo) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 337.0 Tm (estimado de MXN 665,670 es razonable frente a beneficios potenciales conservadores de MXN 1.0) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 324.0 Tm (millones anuales y frente al valor clinico de priorizar lesiones precancerosas. La condicion) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 311.0 Tm (indispensable es mantener el sistema como apoyo experimental hasta completar validacion externa,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 298.0 Tm (explicabilidad, monitoreo, aprobacion etica y analisis de cumplimiento.) Tj ET
+BT /F2 13 Tf 1 0 0 1 54.0 270.0 Tm (10. Referencias) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 245.0 Tm (Albóniga, O. E., Cubiella, J., Bujanda, L., Aspichueta, P., Blanco, M. E., Lanza, B., Alonso, C.,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 232.0 Tm (& Falcón-Pérez, J. M. \(2025\). Metabolic signature in combination with fecal immunochemical test) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 219.0 Tm (as a non-invasive tool for advanced colorectal neoplasia diagnosis. *Cancers*, 17\(14\), 2339.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 206.0 Tm (https://doi.org/10.3390/cancers17142339) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 186.0 Tm (Baccarin, F. \(2020\). Machine learning that pays the bills: choosing models in business contexts.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 173.0 Tm (*Towards Data Science*.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 153.0 Tm (Babic, B., Cohen, I. G., Evgeniou, T., & Gerke, S. \(2021\). When machine learning goes off the) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 140.0 Tm (rails. *Harvard Business Review*.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 120.0 Tm (Breiman, L. \(1996\). Bagging predictors. *Machine Learning*, 24\(2\), 123-140.) Tj ET
+BT /F1 8 Tf 1 0 0 1 201.5 28.0 Tm (Avance 7. Resumen ejecutivo - Equipo 22 | Pagina 8) Tj ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Length 1786 >>
+stream
+BT /F1 10 Tf 1 0 0 1 54.0 788.0 Tm (Cubiella, J., Clos-Garcia, M., Alonso, C., Martinez-Arranz, I., Perez-Cormenzana, M.,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 775.0 Tm (Barrenechea, Z., Berganza, J., Rodriguez-Llopis, I., D'Amato, M., Bujanda, L., Diaz-Ondina, M., &) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 762.0 Tm (Falcon-Perez, J. M. \(2018\). Targeted UPLC-MS metabolic analysis of human faeces reveals novel) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 749.0 Tm (low-invasive candidate markers for colorectal cancer. *Cancers*, 10\(9\), 300.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 729.0 Tm (Metabolites. \(2022\). A comprehensive metabolomics analysis of fecal samples from advanced adenoma) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 716.0 Tm (and colorectal cancer patients. *Metabolites*, 12\(6\), 550.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 696.0 Tm (Metabolites. \(2023\). A novel approach on the use of samples from faecal occult blood screening) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 683.0 Tm (kits for metabolomics analysis: application in colorectal cancer population. *Metabolites*,) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 670.0 Tm (13\(3\), 321.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 650.0 Tm (Oncology Letters. \(2023\). Metabolomic analysis of gut metabolites in patients. *Oncology) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 637.0 Tm (Letters*, 26\(2\).) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 617.0 Tm (Studer, S., Bui, T. B., Drescher, C., Hanuschkin, A., Winkler, L., Peters, S., & Müller, K. R.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 604.0 Tm (\(2021\). Towards CRISP-ML\(Q\): A machine learning process model with quality assurance methodology.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54.0 591.0 Tm (*Machine Learning and Knowledge Extraction*, 3\(2\), 392-413.) Tj ET
+BT /F1 8 Tf 1 0 0 1 201.5 28.0 Tm (Avance 7. Resumen ejecutivo - Equipo 22 | Pagina 9) Tj ET
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 23 0 R >>
+endobj
+xref
+0 25
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000177 00000 n 
+0000000274 00000 n 
+0000000376 00000 n 
+0000000471 00000 n 
+0000000571 00000 n 
+0000006210 00000 n 
+0000006366 00000 n 
+0000014918 00000 n 
+0000015075 00000 n 
+0000021794 00000 n 
+0000021952 00000 n 
+0000028600 00000 n 
+0000028758 00000 n 
+0000036292 00000 n 
+0000036450 00000 n 
+0000044397 00000 n 
+0000044555 00000 n 
+0000052137 00000 n 
+0000052295 00000 n 
+0000059045 00000 n 
+0000059203 00000 n 
+0000061042 00000 n 
+trailer
+<< /Size 25 /Root 1 0 R >>
+startxref
+61200
+%%EOF
