@@ -77,6 +77,18 @@ La figura sintetiza el hallazgo mas importante para un tomador de decisiones: la
 
 La eleccion de `X_intersect` se justifica porque concentra senal robusta bajo dos criterios independientes: Mutual Information y ANOVA. Tambien evita el riesgo de sobreajuste asociado con `X_full` (131 variables). Como analisis complementario, `X_full Top 15` con Bagging Tree conservo Recall AA = 0.833 y F1 AA = 0.833, por lo que queda como candidato para validacion futura, pero no reemplaza al modelo final hasta completar nested CV y validacion externa.
 
+### 5.2 Comparativa entre X_intersect y X_full Top 15
+
+A solicitud de la Dra. Grettel se listaron lado a lado los predictores de ambos subconjuntos. La coincidencia es del 60% (9 de 15 variables comunes), lo que confirma una senal robusta entre dos estrategias de seleccion independientes (filtro supervisado MI cap ANOVA y seleccion embebida por importancia del Bagging Tree).
+
+| Categoria | Variables |
+|---|---|
+| Comunes a X_intersect y Top 15 (9) | CE(20:5), TG(51:4), PC(O-16:0/16:0), PC(36:5), SM(33:1), SM(42:3), GlcCer(d18:1/24:0), PC(O-16:0/18:2), fit_ug_g |
+| Solo en X_intersect (7) | PC(O-34:1), SM(d18:1/22:0), SM(d18:1/23:0), SM(d18:1/24:1)+SM(d18:2/24:0), age, gender_Male, fob_YES |
+| Solo en Top 15 (6) | SM(d18:0/18:0), CE(20:4), CE(18:2), PE(P-18:0/18:1), TG(58:4), Cer(d18:1/24:0) |
+
+Las 6 variables nuevas en Top 15 incluyen dos biomarcadores reportados como principales en el paper de Alboniga et al. (2025): CE(20:4) y CE(18:2). Su ausencia en X_intersect indica que el filtro MI cap ANOVA del Avance 2 perdio senal que el modelo embedded si captura. Este hallazgo refuerza la propuesta de panel lipidomico dirigido descrita en la seccion 6 y abre la posibilidad de un panel ampliado a aproximadamente 15 lipidos sin sacrificar interpretabilidad.
+
 ## 6. Recomendaciones clave de implementacion
 
 La implementacion debe realizarse como piloto controlado, no como herramienta diagnostica autonoma. El objetivo del piloto es validar integracion tecnica, estabilidad del pipeline y utilidad para priorizacion experimental.
@@ -99,7 +111,7 @@ Google Vertex AI se recomienda como plataforma inicial por su continuidad con no
 
 ### 7.1 Supuestos de planeacion
 
-Las cifras siguientes son estimaciones para presentar a stakeholders y deben refinarse con cotizaciones institucionales. Se usa MXN como moneda de planeacion. Para servicios cloud internacionales se asume una paridad interna de referencia de 1 USD = MXN 18.50. El costo de hora tecnica se estima en MXN 350 para trabajo academico/prototipo. El costo de metabolomica no dirigida se estima en MXN 9,250 por muestra (aprox. USD 500) y el panel dirigido MRM/SRM en MXN 1,850 por muestra (aprox. USD 100), conforme a rangos comunes citados en el Avance 6.
+Las cifras siguientes son estimaciones para presentar a stakeholders y deben refinarse con cotizaciones institucionales. Se usa MXN como moneda de planeacion. Para servicios cloud internacionales y panel lipidomico se asumen paridades internas de referencia de 1 USD = MXN 20 y 1 EUR = MXN 22 (junio 2026). El costo de hora tecnica se estima en MXN 350 para trabajo academico/prototipo. El costo de metabolomica no dirigida se estima en MXN 10,000-11,000 por muestra (aprox. EUR 500) y el panel dirigido MRM/SRM en MXN 1,100-2,200 por muestra (aprox. EUR 50-100), conforme a los rangos refinados en el Avance 6 tras la retroalimentacion docente.
 
 ### 7.2 Costos incurridos por fase CRISP-ML(Q)
 
@@ -151,6 +163,10 @@ Los beneficios se estiman para una cohorte anual de 1,000 pacientes en tamizaje 
 
 En un escenario prudente, aplicando solo 40% de captura efectiva por incertidumbre de adopcion, el beneficio anual seria MXN 1,032,000. Comparado con el costo anual del piloto (MXN 665,670), el retorno potencial seria positivo (beneficio/costo aproximado de 1.55). En un escenario completo, el beneficio/costo podria acercarse a 3.9. Estas cifras no deben interpretarse como ROI clinico definitivo, sino como racional economico para financiar la validacion.
 
+**Posicionamiento competitivo frente a Cologuard (alternativa de EE.UU.):** El test de ADN en heces Cologuard de Exact Sciences, la alternativa no invasiva mas conocida en Estados Unidos, cuesta entre MXN 10,000 y MXN 15,000 por test e implica importacion desde EE.UU. El panel lipidomico dirigido propuesto en este proyecto cuesta entre MXN 1,100 y MXN 2,200 por muestra: es entre 5 y 10 veces mas barato y puede producirse localmente en laboratorios mexicanos con espectrometros de masas dirigidos. Para sistemas de salud publicos con presupuesto limitado (IMSS, ISSSTE), esto representa una via economicamente viable para escalamiento poblacional que Cologuard no permite.
+
+**Ahorro estimado por paciente FIT-positivo:** El protocolo de tamizaje actual cuesta aproximadamente MXN 10,500 por paciente con FIT positivo (FIT ~MXN 500 mas colonoscopia ~MXN 10,000). Bajo el protocolo propuesto (FIT mas panel lipidomico como filtro, con colonoscopia solo cuando ambos resultan positivos), el ahorro estimado seria de MXN 3,000 a MXN 5,000 por paciente FIT-positivo, dependiendo de la tasa de filtrado del panel (escenario conservador 30%, escenario optimista 50% basado en la precision CTRL = 1.00 del modelo). Este ahorro por paciente es complementario al beneficio agregado de la tabla anterior y refuerza la viabilidad operativa del piloto.
+
 ### 7.5 Beneficios intangibles
 
 El proyecto aporta beneficios cualitativos importantes. Primero, transforma mediciones lipidomicas complejas en una herramienta interpretable para investigacion clinica. Segundo, mejora la trazabilidad de decisiones mediante CRISP-ML(Q), versionamiento del pipeline y monitoreo. Tercero, permite generar hipotesis biologicas sobre biomarcadores como `CE(20:5)`, `TG(51:4)` y `PC(O-16:0/16:0)`. Cuarto, ayuda a construir capacidades institucionales de MLOps responsable en salud. Finalmente, enfoca la atencion en AA, clase que representa la ventana preventiva mas valiosa.
@@ -187,13 +203,13 @@ La decision ejecutiva recomendada es financiar un piloto controlado de 12 meses.
 
 Albóniga, O. E., Cubiella, J., Bujanda, L., Aspichueta, P., Blanco, M. E., Lanza, B., Alonso, C., & Falcón-Pérez, J. M. (2025). Metabolic signature in combination with fecal immunochemical test as a non-invasive tool for advanced colorectal neoplasia diagnosis. *Cancers*, 17(14), 2339. https://doi.org/10.3390/cancers17142339
 
-Baccarin, F. (2020). Machine learning that pays the bills: choosing models in business contexts. *Towards Data Science*.
+Baccarin, F. (2020). Machine learning that pays the bills: choosing models in business contexts. *Towards Data Science*. https://towardsdatascience.com/machine-learning-that-pays-the-bills-choosing-models-in-business-contexts-e9003fd434a1
 
-Babic, B., Cohen, I. G., Evgeniou, T., & Gerke, S. (2021). When machine learning goes off the rails. *Harvard Business Review*.
+Babic, B., Cohen, I. G., Evgeniou, T., & Gerke, S. (2021). When machine learning goes off the rails. *Harvard Business Review*. https://hbr.org/2021/01/when-machine-learning-goes-off-the-rails
 
-Breiman, L. (1996). Bagging predictors. *Machine Learning*, 24(2), 123-140.
+Breiman, L. (1996). Bagging predictors. *Machine Learning*, 24(2), 123-140. https://doi.org/10.1007/BF00058655
 
-Cubiella, J., Clos-Garcia, M., Alonso, C., Martinez-Arranz, I., Perez-Cormenzana, M., Barrenechea, Z., Berganza, J., Rodriguez-Llopis, I., D'Amato, M., Bujanda, L., Diaz-Ondina, M., & Falcon-Perez, J. M. (2018). Targeted UPLC-MS metabolic analysis of human faeces reveals novel low-invasive candidate markers for colorectal cancer. *Cancers*, 10(9), 300.
+Cubiella, J., Clos-Garcia, M., Alonso, C., Martinez-Arranz, I., Perez-Cormenzana, M., Barrenechea, Z., Berganza, J., Rodriguez-Llopis, I., D'Amato, M., Bujanda, L., Diaz-Ondina, M., & Falcon-Perez, J. M. (2018). Targeted UPLC-MS metabolic analysis of human faeces reveals novel low-invasive candidate markers for colorectal cancer. *Cancers*, 10(9), 300. https://doi.org/10.3390/cancers10090300
 
 Metabolites. (2022). A comprehensive metabolomics analysis of fecal samples from advanced adenoma and colorectal cancer patients. *Metabolites*, 12(6), 550.
 
@@ -201,4 +217,4 @@ Metabolites. (2023). A novel approach on the use of samples from faecal occult b
 
 Oncology Letters. (2023). Metabolomic analysis of gut metabolites in patients. *Oncology Letters*, 26(2).
 
-Studer, S., Bui, T. B., Drescher, C., Hanuschkin, A., Winkler, L., Peters, S., & Müller, K. R. (2021). Towards CRISP-ML(Q): A machine learning process model with quality assurance methodology. *Machine Learning and Knowledge Extraction*, 3(2), 392-413.
+Studer, S., Bui, T. B., Drescher, C., Hanuschkin, A., Winkler, L., Peters, S., & Müller, K. R. (2021). Towards CRISP-ML(Q): A machine learning process model with quality assurance methodology. *Machine Learning and Knowledge Extraction*, 3(2), 392-413. https://doi.org/10.3390/make3020020
