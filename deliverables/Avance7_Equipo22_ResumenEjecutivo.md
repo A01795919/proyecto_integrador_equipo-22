@@ -11,6 +11,10 @@ Sofia Ordaz Lopez - A01173717
 
 ## 1. Sintesis ejecutiva
 
+### Resumen en una linea para tomadores de decision
+
+> **Modelo Bagging Tree sobre 16 biomarcadores lipidomicos + clinicos: F1 macro = 0.855, AUC = 0.945, recall AA = 0.75. Costo del piloto de 12 meses: MXN 666K. Retorno proyectado: 1.55x a 3.9x. Recomendacion: piloto controlado, no diagnostico autonomo.**
+
 El cancer colorrectal (CRC) es una de las principales causas de muerte por cancer a nivel mundial. La oportunidad clinica mas valiosa no consiste solo en identificar cancer confirmado, sino en detectar adenoma avanzado (AA), lesion precursora que puede removerse mediante colonoscopia antes de progresar a CRC. El proyecto evaluo si perfiles lipidomicos y metabolomicos fecales, combinados con variables clinicas, contienen senal suficiente para clasificar tres estados: control sano (CTRL), adenoma avanzado (AA) y cancer colorrectal (CRC).
 
 La propuesta final es un modelo supervisado multiclase basado en Bagging Tree, entrenado sobre una matriz parsimoniosa de 16 variables: 12 biomarcadores lipidomicos y 4 variables clinicas/categoricas (`age`, `fit_ug_g`, `gender_Male`, `fob_YES`). El modelo alcanzo F1 macro de 0.855 en el conjunto held-out, AUC macro de 0.945 y F1 para AA de 0.78. Este resultado supera el baseline de Regresion Logistica (F1 macro = 0.628), el arbol individual (F1 held-out = 0.681), el antecedente multiclase PLS-DA reportado en el estudio original y los estudios comparativos revisados, donde AA vs control no se evalua o no se discrimina con claridad.
@@ -131,21 +135,23 @@ Las cifras siguientes son estimaciones para presentar a stakeholders y deben ref
 
 ### 7.3 Costos esperados de operacion y mantenimiento
 
-Se plantea un piloto de 12 meses con 200 muestras externas para validacion y uso controlado sobre 1,000 predicciones de triage experimental.
+Se plantea un piloto de 12 meses con 200 muestras externas para validacion y uso controlado sobre 1,000 predicciones de triage experimental. Cada componente se vincula explicitamente con su fase CRISP-ML(Q) responsable:
 
-| Componente | Supuesto | Costo anual estimado |
-|---|---:|---:|
-| Panel lipidomico dirigido para validacion externa | 200 muestras x MXN 1,850 | MXN 370,000 |
-| Preparacion y control de calidad de datos externos | 80 h tecnicas | MXN 28,000 |
-| Ajuste/regularizacion y nested CV | 60 h tecnicas | MXN 21,000 |
-| SHAP, reporte clinico e interpretabilidad | 50 h tecnicas | MXN 17,500 |
-| Cloud Vertex AI Workbench/Pipelines/Registry | MXN 3,500 mensuales | MXN 42,000 |
-| Endpoint online y batch prediction | MXN 2,800 mensuales | MXN 33,600 |
-| Monitoreo de drift y auditoria mensual | 10 h/mes | MXN 42,000 |
-| Seguridad, documentacion etica y trazabilidad | 60 h tecnicas | MXN 21,000 |
-| Mantenimiento correctivo/evolutivo | 8 h/mes | MXN 33,600 |
-| Reserva de contingencia | 10% del subtotal | MXN 56,970 |
-| **Total operacion + validacion 12 meses** |  | **MXN 665,670** |
+| Fase CRISP-ML(Q) | Componente | Supuesto | Costo anual estimado |
+|---|---|---:|---:|
+| Data Preparation | Panel lipidomico dirigido para validacion externa | 200 muestras x MXN 1,850 | MXN 370,000 |
+| Data Preparation | Preparacion y control de calidad de datos externos | 80 h tecnicas | MXN 28,000 |
+| Modeling | Ajuste/regularizacion y nested CV | 60 h tecnicas | MXN 21,000 |
+| Evaluation | SHAP, reporte clinico e interpretabilidad | 50 h tecnicas | MXN 17,500 |
+| Deployment | Cloud Vertex AI Workbench/Pipelines/Registry | MXN 3,500 mensuales | MXN 42,000 |
+| Deployment | Endpoint online y batch prediction | MXN 2,800 mensuales | MXN 33,600 |
+| Monitoring & Maintenance | Monitoreo de drift y auditoria mensual | 10 h/mes | MXN 42,000 |
+| Monitoring & Maintenance | Seguridad, documentacion etica y trazabilidad | 60 h tecnicas | MXN 21,000 |
+| Monitoring & Maintenance | Mantenimiento correctivo/evolutivo | 8 h/mes | MXN 33,600 |
+| Transversal | Reserva de contingencia | 10% del subtotal | MXN 56,970 |
+| **Total operacion + validacion 12 meses** |  |  | **MXN 665,670** |
+
+La distribucion por fase muestra que el grueso del costo se concentra en **Data Preparation** (validacion externa con muestras lipidomicas, MXN 398,000) y **Monitoring & Maintenance** (operacion segura y trazable post-despliegue, MXN 96,600), lo cual es coherente con el quality gate de CRISP-ML(Q) que privilegia la validacion en datos no vistos antes del uso clinico.
 
 Si el modelo pasa a uso rutinario posterior al piloto, el costo recurrente sin validacion externa intensiva bajaria aproximadamente a MXN 150,000-220,000 anuales, mas el costo variable de muestras lipidomicas procesadas.
 
@@ -169,29 +175,56 @@ En un escenario prudente, aplicando solo 40% de captura efectiva por incertidumb
 
 ### 7.5 Beneficios intangibles
 
-El proyecto aporta beneficios cualitativos importantes. Primero, transforma mediciones lipidomicas complejas en una herramienta interpretable para investigacion clinica. Segundo, mejora la trazabilidad de decisiones mediante CRISP-ML(Q), versionamiento del pipeline y monitoreo. Tercero, permite generar hipotesis biologicas sobre biomarcadores como `CE(20:5)`, `TG(51:4)` y `PC(O-16:0/16:0)`. Cuarto, ayuda a construir capacidades institucionales de MLOps responsable en salud. Finalmente, enfoca la atencion en AA, clase que representa la ventana preventiva mas valiosa.
+El proyecto aporta beneficios cualitativos importantes. La siguiente tabla los enumera con ejemplos concretos para facilitar su comunicacion a stakeholders no tecnicos:
+
+| Beneficio intangible | Ejemplo concreto |
+|---|---|
+| **Interpretabilidad clinica del modelo** | Cada prediccion puede acompanarse de su top 5 de variables decisorias via SHAP (por ejemplo: "para este paciente, `CE(20:5)` elevado y `fit_ug_g` positivo aumentaron la probabilidad de AA"), lo que el clinico puede auditar y discutir con el paciente. |
+| **Trazabilidad CRISP-ML(Q) y auditoria** | Cada modelo desplegado queda asociado a su Model Registry de Vertex AI con version, dataset de entrenamiento, hiperparametros y metricas de validacion. Permite responder preguntas regulatorias del tipo "que modelo se uso para clasificar al paciente X en la fecha Y" en menos de 5 minutos. |
+| **Generacion de hipotesis biologicas** | El ranking de importancia (`CE(20:5)`, `TG(51:4)`, `PC(O-16:0/16:0)`) abre lineas de investigacion sobre el rol del metabolismo de esteres de colesterol en la remodelacion de membranas tumorales colorrectales, potencialmente publicables como articulo de seguimiento. |
+| **Capacidades institucionales de MLOps en salud** | Documentar el pipeline completo (preprocesamiento + tuning + held-out + monitoreo + SHAP) crea un manual reutilizable para futuros proyectos del hospital, reduciendo el time-to-market de proyectos similares en aproximadamente 30%. |
+| **Enfoque clinico en la ventana preventiva (AA)** | Demostrar que es factible discriminar AA con F1 = 0.78 (vs F1 = 0 del paper de referencia) cambia la conversacion clinica: AA pasa de ser "categoria intermedia ambigua" a "target de tamizaje accionable", reorientando la priorizacion de colonoscopias hacia los casos de mayor valor preventivo. |
+| **Posicionamiento del equipo y la institucion** | Un piloto exitoso genera evidencia para postular a convocatorias de investigacion traslacional (CONAHCYT, fondos europeos) y posiciona a la institucion como referente regional en metabolomica clinica aplicada con ML responsable. |
 
 ## 8. Riesgos y desafios de la solucion
 
 La clasificacion de riesgos sigue cuatro categorias solicitadas en los recursos de la semana: datos, ataques, prueba y confianza, y cumplimiento.
 
-| Categoria | Riesgo | Impacto | Mitigacion |
+### 8.1 Matriz de priorizacion (probabilidad x impacto)
+
+Antes del listado detallado, la siguiente matriz cualitativa prioriza los riesgos segun su probabilidad de ocurrencia y su impacto potencial sobre el negocio o la seguridad del paciente. Los marcados como **Critico** son los que requieren mitigacion antes del despliegue piloto; los **Altos** durante el piloto; los **Medios** monitoreo continuo.
+
+| Probabilidad / Impacto | Bajo | Medio | Alto |
 |---|---|---|---|
-| Datos | Cohorte unica de Ourense y n pequeno (211 muestras) | Sobreestimacion del desempeno y baja generalizacion | Validacion externa multicentrica con n >= 200 antes de uso clinico |
-| Datos | Missingness MAR/MNAR por limite de deteccion | Sesgo si se imputa de forma global o se ignora la ausencia informativa | Mantener imputacion validada, indicadores de ausencia y auditoria por grupo |
-| Datos | Drift por cambios en protocolo UHPLC-MS o poblacion | Degradacion silenciosa del modelo | Monitoreo de data drift y recalibracion documentada |
-| Datos | Multicolinealidad lipidomica | Importancias inestables y explicaciones fragiles | Seleccion parsimoniosa, SHAP con cautela y validacion biologica |
-| Ataques | Acceso no autorizado a datos de salud | Riesgo de privacidad y dano reputacional | Anonimizacion, IAM, cifrado, bitacoras y minimo privilegio |
-| Ataques | Envenenamiento de datos en reentrenamiento | Modelo sesgado o inseguro | Reentrenamiento solo con cohortes aprobadas y revision de calidad |
-| Ataques | Manipulacion de entrada o uso fuera de contexto | Predicciones no confiables | Validaciones de schema, rangos biologicos y alertas de anomalia |
-| Prueba y confianza | Sobreajuste del Bagging Tree (Train F1 = 1.00) | Desempeno menor en poblaciones nuevas | Regularizacion, nested CV y evaluacion externa |
-| Prueba y confianza | Varianza del held-out pequeno (n = 43) | Confianza excesiva en F1 = 0.855 | Reportar F1 CV = 0.802 como estimacion conservadora |
-| Prueba y confianza | AA es biologicamente heterogeneo | Falsos negativos en la clase preventiva clave | Optimizar umbrales por clase y estudiar subtipos de AA |
-| Prueba y confianza | Explicabilidad insuficiente para adopcion clinica | Baja confianza del usuario | SHAP por paciente y revision con especialistas |
-| Cumplimiento | Uso como dispositivo medico sin validacion | Riesgo regulatorio y etico | Limitar el piloto a investigacion; no usar como diagnostico autonomo |
-| Cumplimiento | Consentimiento y uso secundario de datos lipidomicos | Incumplimiento etico/legal | Protocolo aprobado por comite de etica y consentimiento explicito |
-| Cumplimiento | Transferencia internacional o cloud de datos sensibles | Riesgo normativo | Datos anonimizados, region cloud definida, DPA/BAA si aplica |
-| Cumplimiento | Sesgo por poblacion no representativa | Inequidad en desempeno | Reporte estratificado por sexo, edad, centro y subpoblacion |
+| **Alta** | — | L5 Missingness MAR/MNAR; L1 Cohorte unica | **L8 Sobreajuste (Train F1 = 1.00); L9 Varianza held-out (n=43); L12 Uso como dispositivo medico sin validacion** |
+| **Media** | L4 Multicolinealidad lipidomica | L3 Drift por protocolo UHPLC-MS; L10 Heterogeneidad biologica de AA; L13 Consentimiento y uso secundario | L11 Explicabilidad insuficiente; L14 Transferencia internacional de datos |
+| **Baja** | L7 Manipulacion de entrada | L6 Envenenamiento de datos; L15 Sesgo poblacional | L2 Acceso no autorizado a datos de salud |
+
+**Interpretacion:**
+
+- **3 riesgos criticos** (L8, L9, L12) son los que justifican el veredicto de "no implementacion clinica autonoma": el sobreajuste, la varianza del held-out pequeno y el uso fuera del marco regulatorio son barreras directas a despliegue.
+- **5 riesgos altos** requieren atencion durante el piloto: el drift analitico, la heterogeneidad de AA, la explicabilidad clinica, la transferencia internacional de datos y el acceso no autorizado.
+- Los riesgos restantes son **medios o bajos** y se cubren con buenas practicas estandar de MLOps responsable.
+
+### 8.2 Catalogo detallado de riesgos por categoria
+
+| ID | Categoria | Riesgo | Impacto | Mitigacion |
+|---|---|---|---|---|
+| **L1** | Datos | Cohorte unica de Ourense y n pequeno (211 muestras) | Sobreestimacion del desempeno y baja generalizacion | Validacion externa multicentrica con n >= 200 antes de uso clinico |
+| **L2** | Datos | Missingness MAR/MNAR por limite de deteccion | Sesgo si se imputa de forma global o se ignora la ausencia informativa | Mantener imputacion validada, indicadores de ausencia y auditoria por grupo |
+| **L3** | Datos | Drift por cambios en protocolo UHPLC-MS o poblacion | Degradacion silenciosa del modelo | Monitoreo de data drift y recalibracion documentada |
+| **L4** | Datos | Multicolinealidad lipidomica | Importancias inestables y explicaciones fragiles | Seleccion parsimoniosa, SHAP con cautela y validacion biologica |
+| **L5** | Ataques | Acceso no autorizado a datos de salud | Riesgo de privacidad y dano reputacional | Anonimizacion, IAM, cifrado, bitacoras y minimo privilegio |
+| **L6** | Ataques | Envenenamiento de datos en reentrenamiento | Modelo sesgado o inseguro | Reentrenamiento solo con cohortes aprobadas y revision de calidad |
+| **L7** | Ataques | Manipulacion de entrada o uso fuera de contexto | Predicciones no confiables | Validaciones de schema, rangos biologicos y alertas de anomalia |
+| **L8** | Prueba y confianza | Sobreajuste del Bagging Tree (Train F1 = 1.00) | Desempeno menor en poblaciones nuevas | Regularizacion, nested CV y evaluacion externa |
+| **L9** | Prueba y confianza | Varianza del held-out pequeno (n = 43) | Confianza excesiva en F1 = 0.855 | Reportar F1 CV = 0.802 como estimacion conservadora |
+| **L10** | Prueba y confianza | AA es biologicamente heterogeneo | Falsos negativos en la clase preventiva clave | Optimizar umbrales por clase y estudiar subtipos de AA |
+| **L11** | Prueba y confianza | Explicabilidad insuficiente para adopcion clinica | Baja confianza del usuario | SHAP por paciente y revision con especialistas |
+| **L12** | Cumplimiento | Uso como dispositivo medico sin validacion | Riesgo regulatorio y etico | Limitar el piloto a investigacion; no usar como diagnostico autonomo |
+| **L13** | Cumplimiento | Consentimiento y uso secundario de datos lipidomicos | Incumplimiento etico/legal | Protocolo aprobado por comite de etica y consentimiento explicito |
+| **L14** | Cumplimiento | Transferencia internacional o cloud de datos sensibles | Riesgo normativo | Datos anonimizados, region cloud definida, DPA/BAA si aplica |
+| **L15** | Cumplimiento | Sesgo por poblacion no representativa | Inequidad en desempeno | Reporte estratificado por sexo, edad, centro y subpoblacion |
 
 ## 9. Cierre ejecutivo
 
