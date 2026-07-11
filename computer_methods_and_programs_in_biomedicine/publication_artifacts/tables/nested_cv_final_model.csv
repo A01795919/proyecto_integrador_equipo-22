@@ -1,0 +1,6 @@
+outer_fold,test_f1_macro,best_inner_f1_macro,best_params
+1,0.7471509971509972,0.7637614386259917,"{""estimator__max_depth"": null, ""estimator__min_samples_leaf"": 3, ""max_features"": 0.6, ""max_samples"": 0.6, ""n_estimators"": 100}"
+2,0.8207402977139818,0.8322186663747931,"{""estimator__max_depth"": null, ""estimator__min_samples_leaf"": 5, ""max_features"": 0.6, ""max_samples"": 0.6, ""n_estimators"": 100}"
+3,0.7826001955034213,0.8395986290342501,"{""estimator__max_depth"": null, ""estimator__min_samples_leaf"": 1, ""max_features"": 0.6, ""max_samples"": 0.8, ""n_estimators"": 100}"
+4,0.8345881171968128,0.7921774374124754,"{""estimator__max_depth"": null, ""estimator__min_samples_leaf"": 1, ""max_features"": 0.6, ""max_samples"": 0.8, ""n_estimators"": 100}"
+5,0.7616049382716049,0.7275744012625572,"{""estimator__max_depth"": null, ""estimator__min_samples_leaf"": 5, ""max_features"": 0.6, ""max_samples"": 0.8, ""n_estimators"": 50}"

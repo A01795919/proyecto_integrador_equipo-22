@@ -1,0 +1,29 @@
+{
+  "heldout_n": 43,
+  "heldout_support": {
+    "AA": 12,
+    "CRC": 15,
+    "CTRL": 16
+  },
+  "cv_f1_macro_mean": 0.8016251800360923,
+  "cv_f1_macro_sd": 0.05087432967281787,
+  "heldout_f1_macro": 0.8548089591567853,
+  "heldout_accuracy": 0.8604651162790697,
+  "heldout_auc_macro_ovr": 0.9448291801786425,
+  "classes": [
+    "AA",
+    "CRC",
+    "CTRL"
+  ],
+  "nested_cv_f1_macro_mean": 0.7893369091673637,
+  "nested_cv_f1_macro_sd": 0.03750980316443996,
+  "top15_cv_f1_macro_mean": 0.8306053799164929,
+  "top15_cv_f1_macro_sd": 0.0241965793166506,
+  "top5_tree_shap_features": [
+    "CE(20:5)",
+    "TG(51:4)",
+    "fit_ug_g",
+    "PC(O-16:0/16:0)",
+    "GlcCer(d18:1/24:0)"
+  ]
+}
